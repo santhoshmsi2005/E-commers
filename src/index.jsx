@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDom from "react-dom/client";
 import "./index.css";
-import Navebar from "./components/NaveBar";
+import Navebar from "./components/Navebar";
 import Counter from "./pages/Counter"
 import Footer from "./components/Footer";
 import HeroSection from "./pages/HeroSection";

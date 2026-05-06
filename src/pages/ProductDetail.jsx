@@ -1,6 +1,34 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
+/* ── Animated skeleton while loading ── */
+const SkeletonDetail = () => (
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-950 py-12 animate-fade-in">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="h-4 w-48 skeleton rounded mb-8" />
+            <div className="lg:grid lg:grid-cols-2 lg:gap-12 items-start">
+                <div className="skeleton rounded-[2rem] aspect-square w-full" />
+                <div className="mt-10 lg:mt-0 space-y-5">
+                    <div className="h-4 w-32 skeleton rounded-full" />
+                    <div className="h-9 w-3/4 skeleton rounded-xl" />
+                    <div className="h-5 w-28 skeleton rounded" />
+                    <div className="h-24 skeleton rounded-2xl" />
+                    <div className="h-16 skeleton rounded-2xl" />
+                    <div className="space-y-3">
+                        <div className="h-4 skeleton rounded" />
+                        <div className="h-4 skeleton rounded" />
+                        <div className="h-4 w-2/3 skeleton rounded" />
+                    </div>
+                    <div className="flex gap-4 pt-4">
+                        <div className="flex-1 h-14 skeleton rounded-2xl" />
+                        <div className="w-14 h-14 skeleton rounded-2xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+);
+
 const ProductDetails = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
